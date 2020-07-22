@@ -1,25 +1,46 @@
-<div class="grid">
-  <div class="col-9">
-    <span class="headerfont"> Hello</span> <span class="headerfont red"> Placeholder for Name</span>
+<div class="container">
+  <div>
+    <div class="d-flex justify-content-center">
+      <span class="headerfont"> Hello</span> <span class="headerfont red"> Placeholder for Name</span>
 
-  </div>
-</div>
+    </div>
 
 
-<div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">NPS</a>
-  <a href="#contact">Smart</a>
-</div>
-
-<table class="tabletop">
-  <td class="tableone">Level</td>
-  <td class="tabletwo">Date and Time</td>
-  <td class="tableone">Source</td>
-  <td class="tabletwo">Event ID</td>
-  <td class="tableone">Task Category</td>
-
-</table>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Cental Logger</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Servers
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
 <!--
   odd ngfor will apply different
   <ng-container *ngFor="let detailof data.details; let index = index" [ngClass]="{'myStyle': 0 === index % 2}">...</ng-container>
@@ -37,3 +58,5 @@
   </table>
 
   </div>
+</div>
+</div>
