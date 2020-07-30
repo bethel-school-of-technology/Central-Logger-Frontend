@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+let url = 'localhost:3000/';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
