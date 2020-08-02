@@ -60,3 +60,8 @@ border: 1px solid black;
 .tabletwo{
   background-color: lightblue;
 }
+
+/* Adds separation in table */
+table > tr > td {
+    border:1px solid black;
+}

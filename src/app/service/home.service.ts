@@ -5,5 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class HomeService {
 
+  URL: string = 'localhost:3000/home'
+
   constructor() { }
 }
