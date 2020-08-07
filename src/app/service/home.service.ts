@@ -1,11 +1,19 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class HomeService {
 
   URL: string = 'localhost:3000/home'
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+
+
+
+
 }
