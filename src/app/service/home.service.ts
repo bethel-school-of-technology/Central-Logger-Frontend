@@ -8,10 +8,13 @@ import { User } from '../models/user';
 
 export class HomeService {
 
-  URL: string = 'localhost:3000/home'
+  // URL: string = 'localhost:3000/'
 
-  constructor(private http: HttpClient) { }
+  // constructor(private http: HttpClient) { }
 
+  // signIn(HomeService: any) {
+  //   return this.http.post(`${this.URL}/home`, HomeService);
+  // }
 
 
 
