@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Log } from '../models/log';
 
-let url = 'localhost:3000/';
+
+let url = 'http://localhost:3000/';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +11,16 @@ let url = 'localhost:3000/';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  Logs: Log[];
+  @Input() dataPath: string;
 
-  constructor() { }
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.http.get<Log[]>(this.dataPath).subscribe(logs => {
+      this.Logs = logs;
+    });
   }
 
 }
