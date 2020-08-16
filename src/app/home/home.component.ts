@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Log } from '../models/log';
+import { HomeService } from '../service/home.service';
 
 
 let url = 'http://localhost:3000/';
@@ -15,11 +16,14 @@ export class HomeComponent implements OnInit {
   @Input() dataPath: string;
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private homeservice: HomeService) { }
 
   ngOnInit(): void {
-    this.http.get<Log[]>(this.dataPath).subscribe(logs => {
-      this.Logs = logs;
+    // this.http.get<Log[]>(this.dataPath).subscribe(logs => {
+      // this.Logs = logs;
+    // });
+    this.homeservice.test().subscribe(response => {
+      console.log(response);
     });
   }
 

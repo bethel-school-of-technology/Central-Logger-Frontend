@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
+import { HomeService } from './service/home.service';
+
 const routes: Routes = [
  {
    path:'list'
@@ -26,7 +28,7 @@ const routes: Routes = [
     RouterModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
