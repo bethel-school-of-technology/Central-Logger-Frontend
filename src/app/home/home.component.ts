@@ -19,9 +19,6 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient, private homeservice: HomeService) { }
 
   ngOnInit(): void {
-    // this.http.get<Log[]>(this.dataPath).subscribe(logs => {
-      // this.Logs = logs;
-    // });
     this.homeservice.test().subscribe(response => {
       console.log(response);
     });
