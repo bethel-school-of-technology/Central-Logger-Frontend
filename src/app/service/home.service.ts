@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { Log } from '../models/log';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +9,11 @@ import { Observable } from 'rxjs';
 
 export class HomeService {
 
-  URL: string = 'http://localhost:3000/'
+  URL: string = 'http://localhost:3000/';
 
+  getData(): Observable<any>{
+    return this.http.get<any>(this.URL)
+  }
   constructor(private http: HttpClient) { }
 
 

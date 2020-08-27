@@ -1,8 +1,8 @@
 export class Log {
-    id: number;
+    idTestLogs: number;
     level: number;
     date: string;
     source: number;
-    eventID: number;
+    eventId: number;
     taskCategory: string;
 }
