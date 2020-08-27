@@ -16,12 +16,17 @@ export class HomeComponent implements OnInit {
   @Input() dataPath: string;
 
 
+  getData(): void {
+    this.homeservice.getData().subscribe(p => (this.Logs = p));
+  }
+
   constructor(private http: HttpClient, private homeservice: HomeService) { }
 
   ngOnInit(): void {
     this.homeservice.test().subscribe(response => {
       console.log(response);
     });
+    this.getData();
   }
 
 }
